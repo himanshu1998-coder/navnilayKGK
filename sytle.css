@@ -1,8 +1,16 @@
+@font-face {
+  font-family: dinmedium;
+  src: url(fonts/FF_DIN_Medium.otf);
+}
+@font-face {
+  font-family: dinbold;
+  src: url(fonts/FF_DIN_Bold.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
 }
 .k-container {
   max-width: 90%;
@@ -20,6 +28,7 @@
 .heading {
   font-weight: 300;
   letter-spacing: 2px;
+  font-family: dinbold;
 }
 .full-width {
   max-width: 100%;
@@ -125,13 +134,24 @@ button.active {
 /********* Overview Section **********/
 
 .overview_right {
-  background: url(images/Overview_right.jpg);
+  background-image: linear-gradient(
+      to left,
+      rgb(255 255 255 / 77%) 82%,
+      transparent
+    ),
+    url(images/Overview_right.jpg);
   background-size: cover;
 }
 .overview_left {
   image-rendering: -webkit-optimize-contrast;
 }
-
+p.unit-size {
+  font-weight: 600;
+  display: inline-block;
+  font-family: dinbold !important;
+  color: #2cbdb5;
+  font-size: 22px;
+}
 /********* aminities *******/
 .aminities {
   background-image: url(images/Amenities.jpg);
@@ -141,6 +161,7 @@ button.active {
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 2px;
+  font-family: dinmedium;
 }
 
 /***** site plan  *****/
@@ -353,7 +374,6 @@ button.active {
   .dnone {
     display: block;
   }
-
   /***** banner ***/
 
   #banner {
@@ -484,6 +504,9 @@ button.active {
 
   .footer {
     text-align: center;
+  }
+  p.unit-size {
+    font-size: 11px;
   }
 }
 @media (max-width: 1100px) {
